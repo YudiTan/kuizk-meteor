@@ -11,6 +11,10 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'postSubmit'}}">Create Post</a></li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
         <!-- have to meteor add ian:accounts-ui-bootstrap-3 and meteor add accounts-password first -->
