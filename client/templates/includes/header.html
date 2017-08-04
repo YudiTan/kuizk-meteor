@@ -12,7 +12,8 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
-        <li><a href="{{pathFor 'postSubmit'}}">Create Post</a></li>
+        {{#if currentUser}}<li><a href="{{pathFor 'postSubmit'}}">Create Post</a></li>{{/if}}
+        <!-- the currentUser helper is provided by meteor's accounts package and is the Spacebars equivalent of Meteor.user() -->
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
