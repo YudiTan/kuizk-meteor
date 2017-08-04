@@ -6,7 +6,7 @@ Template.postSubmit.events({ 'submit form': function(e) {
 
     Meteor.call('postInsert', post, function(error, result) {
       if (error) {
-        return alert(error.reason);
+        return throwError(error.reason);
       }
       Router.go('postPage', {_id: result._id});
     });
